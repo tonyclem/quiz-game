@@ -7,7 +7,7 @@ let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
-  currentQuestionIndex++; // increment 
+  currentQuestionIndex++; // increment
   setNextQuestion(); // get the current Question or restart
 });
 
@@ -51,6 +51,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+  clearStatusClass(document.body); // clear all the document in the body
   nextButton.classList.add("hide"); // to hide
   while (answerButtonsElement.firstChild) {
     // loop through and if there's a child in the element
@@ -66,7 +67,13 @@ function selectAnswer(e) {
     // set it to array
     setStatusClass(button, button.dataset.correct); // setStatusClass
   });
-  nextButton.classList.remove("hide");
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    // if it great then length remove the current button
+    nextButton.classList.remove("hide");
+  } else {
+    startButton.innerText = "Restart";
+    startButton.classList.remove("hide");
+  }
 }
 
 function setStatusClass(element, correct) {
@@ -93,6 +100,22 @@ const questions = [
     answers: [
       { text: "4", correct: true },
       { text: "22", correct: false },
+    ],
+  },
+  {
+    question: "Is web developer fun?",
+    answers: [
+      { text: "Kinda", correct: false },
+      { text: "Yes!", correct: true },
+      { text: "Um no", correct: false },
+      { text: "IDK", correct: false },
+    ],
+  },
+  {
+    question: "what is 4 * 2 ?",
+    answers: [
+      { text: "6", correct: false },
+      { text: "8", correct: true },
     ],
   },
 ];
