@@ -12,7 +12,6 @@ nextButton.addEventListener("click", () => {
 });
 
 function startGame() {
-  console.log("Started");
   //   added hide style
   startButton.classList.add("hide");
   //   remove the hide style
