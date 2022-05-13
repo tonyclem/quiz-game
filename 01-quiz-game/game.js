@@ -69,7 +69,7 @@ getNewQuestion = () => {
   // If the length of the question is more than expected go to another end.index
   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //   set localStorage
-    localStorage.setItem("mostRecentScore", score); 
+    localStorage.setItem("mostRecentScore", score);
 
     //go to the end page
     return window.location.assign("./end.html");
@@ -130,5 +130,9 @@ choices.forEach((choice) => {
 });
 
 // incrementScore Function
- 
+incrementScore = (num) => {
+  score += num;
+  scoreText.innerText = score;
+};
+
 // startGame();
