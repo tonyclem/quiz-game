@@ -1,0 +1,207 @@
+body {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+ 
+}
+
+
+body::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://i.ibb.co/GQKZBSK/netherlands-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.75;
+}
+
+#logo {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  width: 400px;
+  filter: drop-shadow(1px 1px 1px #00225f);
+}
+
+#front-page h1{
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 900;
+  color: red;
+  letter-spacing: 3px;
+}
+
+#front-page h2{
+  font-family: sans-serif ;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#front-page p{
+  font-family: sans-serif ;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  text-align: center;
+}
+
+.scrollable {
+  height: auto;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+li {
+  cursor: pointer;
+  padding: 15px 35px;
+  font-family: 'arial';
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(1px 1px 1px #000000);
+  border-radius: 16px;
+  font-weight: bold;
+  margin: 10px;
+  color: #0f53ab
+}
+
+#question {
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+#next-question-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 40px;
+}
+
+#start-quiz-button
+{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  color: white;
+  background-color: #0f53ab;
+  filter: drop-shadow(1px 1px 5px #000000);
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+#skip-question{
+  position: absolute;
+  right: 6em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  color: white;
+  filter: drop-shadow(1px 1px 5px #000000);
+  border-radius: 16px;
+  margin-top: 40px;
+  background-color: #c20202;
+}
+
+#next-question-button{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  color: rgb(5, 0, 0);
+  background-color: #c4c4c4;
+  filter: drop-shadow(1px 1px 5px #000000);
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+#start-quiz-button:hover,
+#skip-question:hover
+{
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.unable-button:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+/* .timer {
+  font-size: 20px;
+  margin-left: -40px;
+  color: red;
+  font-size: 30px;
+} */
+
+.answers:hover {
+  color: #ed5f02;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  padding-top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  color: red;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#user-interface{
+  background-color: rgba(255, 255, 255, 0.6);
+  filter: drop-shadow(2px 2px 2px #807f7f);
+  padding: 80px;
+  border-radius: 30px;
+  transition: opacity .5s;
+}
+
+#submit-btn {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  color: white;
+  background-color: #0f53ab;
+  filter: drop-shadow(1px 1px 5px #000000);
+  border-radius: 16px;
+  margin-top: 40px;
+}
+.final-score {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: red;
+}
+
